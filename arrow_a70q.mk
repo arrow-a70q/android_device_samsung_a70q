@@ -13,11 +13,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Inherit from a70q device
 $(call inherit-product, device/samsung/a70q/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Arrow stuff.
+$(call inherit-product, vendor/arrow/config/common.mk)
+
+# ArrowOS Additional Flags
+DEVICE_MAINTAINER := Lynx
+DEVICE_MAINTAINER_LINK := https://t.me/AliLynx
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_a70q
+PRODUCT_NAME := arrow_a70q
 PRODUCT_DEVICE := a70q
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-A705
